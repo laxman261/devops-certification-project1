@@ -95,6 +95,13 @@
             <artifactId>selenium-java</artifactId>
             <version>3.14.0</version>
         </dependency>
+	  <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.3.0</version>
+	    <scope>test</scope>
+        </dependency>
+	    
 		
 				<!-- LOGGING -->
 		<dependency>
@@ -486,6 +493,12 @@
                                 -enumerations -enumconstants
                             </additionalparam>
                         </configuration>
+			<configuration>
+			<suiteXmlFiles>
+				<suiteXmlFile>testng.xml</suiteXmlFile>
+			</suiteXmlFiles>
+			</configuration>
+				
                     </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
