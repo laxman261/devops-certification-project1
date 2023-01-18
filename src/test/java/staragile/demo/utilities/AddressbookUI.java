@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 
 import com.staragile.demo.utilities.LoggerStackTraceUtil;
 
-public class AddressbookUI extends UI {
+public class AddressbookUI {
 	
 
     public static void main( String[] args ) throws InterruptedException
