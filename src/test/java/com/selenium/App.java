@@ -1,12 +1,16 @@
 package com.selenium;
 
-import java.util.concurrent.TimeUnit;
-
+imoprt org.junit.Assert;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+import org.testng.annotations.AfterTest;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.Test;
+
+
 
 /**
  * Hello world!
@@ -14,8 +18,7 @@ import org.testng.annotations.Test;
  */
 public class App 
 {	@Test
-    public static void main( String[] args ) throws InterruptedException
-    {
+    public void setup() {
         //System.out.println( "Hello World!" );
 	
 		System.setProperty("webdriver.chrome.driver","/root/pkcs/chromedriver");
@@ -23,9 +26,9 @@ public class App
 		
 		
 		
-		ChromeOptions chromeOptions = new ChromeOptions();
+		ChromeOptions Options = new ChromeOptions();
 		//chromeOptions.addArguments("--headless");
-		WebDriver driver = new ChromeDriver(chromeOptions);
+		driver = new ChromeDriver(options);
 		
 		System.out.println("Welcome to the Selenium Scripts - It starts executing here");
 		//automation
