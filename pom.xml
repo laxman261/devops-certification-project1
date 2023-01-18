@@ -7,7 +7,7 @@
     <packaging>war</packaging>
     <version>3.0</version>
     <name>Addressbook example</name>
-
+	<url>http://54.197.91.205:8080/addressbook/</url>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <failOnMissingWebXml>false</failOnMissingWebXml>
@@ -89,6 +89,11 @@
             <artifactId>commons-beanutils</artifactId>
             <version>1.9.2</version>
             <type>jar</type>
+        </dependency>
+	 <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.14.0</version>
         </dependency>
 		
 				<!-- LOGGING -->
