@@ -27,12 +27,9 @@ public class AddressbookUI {
 		
 		
 		driver.findElement(By.className("v-button")).click();
-		driver.findElement(By.id("gwt-uid-5")).sendKeys("prashant");
-		driver.findElement(By.id("gwt-uid-7")).sendKeys("Suragimath");
-		driver.findElement(By.id("gwt-uid-9")).sendKeys("9999999999");
-		driver.findElement(By.id("gwt-uid-11")).sendKeys("pkcsmath@gmail.com");
-		driver.findElement(By.id("gwt-uid-13")).sendKeys("18/01/2023");
-		Thread.sleep(2000);
+		driver.findElement(By.id("email")).sendKeys("prashant");
+		driver.findElement(By.id("pass")).sendKeys("Suragimath");
+		
 		//click on the save button
 		driver.findElement(By.className("v-button-primary")).click();
 		
