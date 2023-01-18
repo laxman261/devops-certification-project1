@@ -18,14 +18,9 @@ public class AddressbookUI {
 		System.setProperty("webdriver.chrome.driver","/root/pkcs/chromedriver");
 		//System.setProperty("webdriver.chrome.driver","/home/ubuntu/chromedriver");
 		
-		
-		
-		ChromeOptions chromeOptions = new ChromeOptions();
 		//chromeOptions.addArguments("--headless");
 		WebDriver driver = new ChromeDriver(chromeOptions);
 		
-		System.out.println("Welcome to the Selenium Scripts - It starts executing here");
-		//automation
 		driver.get("http://54.197.91.205:8080/addressbook/");
 		
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
