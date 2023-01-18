@@ -493,11 +493,7 @@
                                 -enumerations -enumconstants
                             </additionalparam>
                         </configuration>
-			<configuration>
-			<suiteXmlFiles>
-				<suiteXmlFile>testng.xml</suiteXmlFile>
-			</suiteXmlFiles>
-			</configuration>
+			
 				
                     </plugin>
                     <plugin>
