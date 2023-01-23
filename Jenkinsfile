@@ -52,5 +52,12 @@ pipeline {
            ansiblePlaybook credentialsId: 'ec2-user', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'dev.inv', playbook: 'deploy-docker.yml'
              }
         }
+        stage(" Email-Notify"){
+        steps {
+            emailext attachLog: true, body: '''Hello,
+            Check your build status and build logs.
+            Thankyou.''', recipientProviders: [developers()], subject: 'Build Success or Failure?', to: 'pkcsmath2@gmail.com'
+        }
+    }
      }
 }
