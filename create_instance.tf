@@ -5,7 +5,7 @@ secret_key = "2oZE2y0fGaikpJzauuhUMs9N6fmnP75OyXZEfT1L"
 }
 
 resource "aws_instance" "ec2" {
-    ami = "ami-06878d265978313ca"
+    ami = "ami-0778521d914d23bc1"
     instance_type = "t2.micro"
     key_name= "devops"
 }
