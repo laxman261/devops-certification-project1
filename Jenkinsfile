@@ -56,7 +56,7 @@ pipeline {
         steps {
             emailext attachLog: true, body: '''Hello,
             Check your build status and build logs.
-            Thankyou.''', recipientProviders: [developers()], subject: 'Build Success or Failure?', to: 'pkcsmath@gmail.com'
+            Thankyou.''', recipientProviders: [developers()], subject: 'Build Success or Failure?', to: 'pcsuragimath@gmail.com'
         }
     }
      }
