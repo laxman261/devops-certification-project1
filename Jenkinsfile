@@ -5,8 +5,8 @@ pipeline {
         maven 'M2_HOME'
     }
     environment {
-        AWS_ACCESS_KEY_ID = 'AKIAR3EPJ2LQYBJEX535'
-        AWS_SECRET_KEY = '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'    
+        AWS_ACCESS_KEY_ID = 'AKIAUPFWGOROT6FT5QYZ'
+        AWS_SECRET_KEY = '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'    
         
 } 
 
@@ -23,7 +23,7 @@ pipeline {
         }  
         stage('Docker Build') {
             steps {
-                sh 'docker build -t pkcsmath/project2 .'
+                sh 'docker build -t pkcsmath/certificationproject1 .'
             }
         }
   
@@ -32,7 +32,7 @@ pipeline {
       steps {
       	withCredentials([usernamePassword(credentialsId: 'docker-hub', passwordVariable: 'dockerHubPassword', usernameVariable: 'dockerHubUser')]) {
         	sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
-          sh 'docker push pkcsmath/project2'
+          sh 'docker push pkcsmath/certificationproject1'
         }
       }
     }
