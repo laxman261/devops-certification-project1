@@ -3,6 +3,6 @@
   become: true
   tasks:
   - name: create a container
-    command: docker run -itd --name projectcpsa00001 -p 8080:8080 pkcsmath/certificationproject1
+    command: docker run -itd --name projectcpsa00002 -p 8080:8080 pkcsmath/certificationproject1
 
 
