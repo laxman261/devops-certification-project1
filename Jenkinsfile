@@ -42,7 +42,7 @@ stages{
            sh 'mvn --version'
               }
             }
-             }
+             
          stage('teeraform') {
        steps{
            sh 'mvn --version'
