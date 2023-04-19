@@ -25,7 +25,7 @@ stages{
            sh 'docker --version'
               }
             }
-         stage('teeraform') {
+        stage('teeraform') {
        steps{
            sh 'mvn --version'
               }
@@ -47,6 +47,6 @@ stages{
        steps{
            sh 'mvn --version'
               }
-            }
-          }
+           }
         }
+     }
