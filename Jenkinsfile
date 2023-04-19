@@ -4,7 +4,7 @@ pipeline {
         maven 'M2_HOME'
     }
 stages{
-    stage('checkout') {
+    stage('Checkout') {
       steps{
          git 'https://github.com/laxman261/devops-certification-project1.git'
            }
@@ -40,7 +40,7 @@ stages{
            sh 'docker --version'
               }
             }
-         stage('Email Notify') {
+         stage('Email-Notify') {
        steps{
            sh 'mvn --version'
               }
