@@ -4,43 +4,43 @@ pipeline {
         maven 'M2_HOME'
     }
 stages{
-    stage('checkout the project from Github') {
+    stage('checkout') {
       steps{
          git 'https://github.com/laxman261/devops-certification-project1.git'
            }
        }
       
-       stage('compile') {
+       stage('Compile') {
        steps{
            sh 'mvn --version'
               }
             }   
-        stage('Docker') {
+        stage('Docker Build') {
        steps{
            sh 'java --version'
               }
             }
-        stage('ansible') {
+        stage('Docker Push') {
        steps{
            sh 'docker --version'
               }
             }
-         stage('teeraform') {
+         stage('Teeraform init') {
        steps{
            sh 'mvn --version'
               }
             }
-         stage('Docker') {
+         stage('Terraform Apply') {
        steps{
            sh 'java --version'
               }
             }
-        stage('ansible') {
+        stage('Docker Deploy using Ansible') {
        steps{
            sh 'docker --version'
               }
             }
-         stage('teeraform') {
+         stage('Email Notify') {
        steps{
            sh 'mvn --version'
               }
