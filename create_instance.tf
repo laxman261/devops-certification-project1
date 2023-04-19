@@ -1,11 +1,11 @@
 provider "aws" {
 region = "us-east-1"
-access_key = "AKIAUPFWGOROT6FT5QYZ"
-secret_key = "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"
+access_key = "AJPAUPWGOROT7FT5QYV"
+secret_key = "mNhjTmGA5GDSRZPXKKg+kPxzGvM6FZ597rYj4RxX"
 }
 
 resource "aws_instance" "ec2" {
-    ami = "ami-0778521d914d23bc1"
+    ami = "ami-06878d265978313ca"
     instance_type = "t2.micro"
     key_name= "devops"
 }
