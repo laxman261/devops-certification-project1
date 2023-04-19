@@ -29,6 +29,21 @@ stages{
        steps{
            sh 'mvn --version'
               }
-            }   
+            }
+         stage('Docker') {
+       steps{
+           sh 'java --version'
+              }
+            }
+        stage('ansible') {
+       steps{
+           sh 'docker --version'
+              }
+            }
+         stage('teeraform') {
+       steps{
+           sh 'mvn --version'
+              }
+            }     
         }
    }
