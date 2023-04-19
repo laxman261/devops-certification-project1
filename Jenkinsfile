@@ -5,15 +5,15 @@ pipeline {
         maven 'M2_HOME'
     }
     environment {
-        AWS_ACCESS_KEY_ID = 'AKIAUPFWGOROT6FT5QYZ'
-        AWS_SECRET_KEY = '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'    
+        AWS_ACCESS_KEY_ID = 'AJPAUPWGOROT7FT5QYV'
+        AWS_SECRET_KEY = 'mNhjTmGA5GDSRZPXKKg+kPxzGvM6FZ597rYj4RxX'    
         
 } 
 
     stages {
         stage('Checkout') {
             steps {
-            checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/prashantsuragimath/devops-certification-project1.git']]])
+            checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/laxman261/devops-certification-project1.git']]])
             }
         }
         stage('Compile') {
@@ -52,12 +52,6 @@ pipeline {
            ansiblePlaybook credentialsId: 'ec2-user', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'dev.inv', playbook: 'deploy-docker.yml'
              }
         }
-        stage(" Email-Notify"){
-        steps {
-            emailext attachLog: true, body: '''Hello,
-            Check your build status and build logs.
-            Thankyou.''', recipientProviders: [developers()], subject: 'Build Success or Failure?', to: 'pcsuragimath@gmail.com'
-        }
-    }
+        
      }
 }
