@@ -5,7 +5,7 @@ pipeline {
         maven 'M2_HOME'
     }
     environment {
-        AWS_ACCESS_KEY_ID = 'AJPAUPWGOROT7FT5QYV'
+
         AWS_SECRET_KEY = 'mNhjTmGA5GDSRZPXKKg+kPxzGvM6FZ597rYj4RxX'    
         
 } 
